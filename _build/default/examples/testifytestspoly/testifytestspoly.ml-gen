@@ -1,2 +1,0 @@
-(** @canonical Testifytestspoly.Itv *)
-module Itv = Testifytestspoly__Itv

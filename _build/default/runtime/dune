@@ -1,4 +1,0 @@
-(library
-  (public_name testify_runtime)
-  (name testify_runtime)
-  (libraries qcheck))
