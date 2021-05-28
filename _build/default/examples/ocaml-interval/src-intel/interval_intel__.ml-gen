@@ -1,0 +1,14 @@
+(** @canonical Interval_intel.Fpu *)
+module Fpu = Interval_intel__Fpu
+
+
+(** @canonical Interval_intel.Fpu_rename *)
+module Fpu_rename = Interval_intel__Fpu_rename
+
+
+(** @canonical Interval_intel.Fpu_rename_all *)
+module Fpu_rename_all = Interval_intel__Fpu_rename_all
+
+
+(** @canonical Interval_intel.Generic *)
+module Generic = Interval_intel__Generic

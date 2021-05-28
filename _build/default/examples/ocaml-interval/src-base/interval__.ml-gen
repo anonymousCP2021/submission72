@@ -1,0 +1,2 @@
+(** @canonical Interval.Interval__U *)
+module Interval__U = Interval__Interval__U

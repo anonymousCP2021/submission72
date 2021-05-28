@@ -1,0 +1,42 @@
+(lang dune 2.8)
+(name ppx_testify)
+(library
+ (name ppx_testify)
+ (kind ppx_rewriter)
+ (archives (byte ppx_testify.cma) (native ppx_testify.cmxa))
+ (plugins (byte ppx_testify.cma) (native ppx_testify.cmxs))
+ (native_archives ppx_testify.a)
+ (requires
+  zarith
+  ppx_tools_versioned
+  ocaml-migrate-parsetree
+  apron
+  apron.boxMPQ
+  apron.polkaMPQ
+  apronext
+  picasso)
+ (ppx_runtime_deps testify_runtime)
+ (modes byte native)
+ (modules
+  (unwrapped
+   ((name Boolean) (obj_name boolean) (visibility public) (impl))
+   ((name Boxes) (obj_name boxes) (visibility public) (impl))
+   ((name Cardinality) (obj_name cardinality) (visibility public) (impl))
+   ((name Consistency) (obj_name consistency) (visibility public) (impl))
+   ((name Cover) (obj_name cover) (visibility public) (impl))
+   ((name Gegen) (obj_name gegen) (visibility public) (impl))
+   ((name Helper) (obj_name helper) (visibility public) (impl))
+   ((name ItvF) (obj_name itvF) (visibility public) (impl))
+   ((name ItvI) (obj_name itvI) (visibility public) (impl))
+   ((name Lang) (obj_name lang) (visibility public) (impl))
+   ((name Log) (obj_name log) (visibility public) (impl))
+   ((name Pentagon) (obj_name pentagon) (visibility public) (impl))
+   ((name Polyhedra) (obj_name polyhedra) (visibility public) (impl))
+   ((name Ppx_testify) (obj_name ppx_testify) (visibility public) (impl))
+   ((name Satisfying) (obj_name satisfying) (visibility public) (impl))
+   ((name Signatures) (obj_name signatures) (visibility public) (impl))
+   ((name State) (obj_name state) (visibility public) (impl))
+   ((name Such_that) (obj_name such_that) (visibility public) (impl))
+   ((name Tools) (obj_name tools) (visibility public) (impl))
+   ((name Typrepr) (obj_name typrepr) (visibility public) (impl))))
+ (inline_tests.backend (runner_libraries testify_runtime) (flags :standard)))
